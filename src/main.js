@@ -11,6 +11,7 @@ import logger from 'middleware/logger';
 connect();
 env.config();
 
+const PORT = process.env.PORT || 8080;
 const app = express();
 const httpServer = http.Server(app);
 
@@ -32,7 +33,6 @@ app.all('*', (req, res, next) => {
   next(err);
 });
 app.use(errorHandler);
-const PORT = process.env.PORT || 8080;
 
 httpServer.listen(PORT, () => {
   console.log('Server is listening on port:', PORT);
