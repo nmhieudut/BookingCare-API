@@ -1,15 +1,16 @@
 import db from 'database/models';
+import { UserService } from 'services';
 
 export const UserController = {
-  async getAll(req, res) {
+  async getAll(req, res, next) {
     try {
       const users = await db.User.findAll();
       return res.send(users);
     } catch (e) {
-      return res.status(500).send(e);
+      next(e);
     }
   },
-  async getUser(req, res) {
+  async getUser(rreq, res, next) {
     try {
       const user = await User.findOne({
         where: {
@@ -23,9 +24,10 @@ export const UserController = {
       }
       return res.status(200).send(user);
     } catch (e) {
-      return res.status(400).send({
-        message: e.message
-      });
+      next(e);
     }
+  },
+  async createUser(req, res, next) {
+    return UserService.createOne(req.body);
   }
 };

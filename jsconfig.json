@@ -11,7 +11,9 @@
       "middleware/*": ["src/middleware/*"],
       "database/*": ["src/database/*"],
       "routes/*": ["src/routes/*"],
-      "utils/*": ["src/utils/*"]
+      "utils/*": ["src/utils/*"],
+      "services/*": ["src/services/*"],
+      "plugins/*": ["src/plugins/*"]
     }
   },
   "exclude": ["node_modules"]

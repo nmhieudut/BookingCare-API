@@ -1,18 +1,21 @@
 export const ErrorMessage = {
   requestErrorMessage: {
-    NOT_ACTIVATED: 'Tài khoản này đã bị khóa',
-    EXISTED_EMAIL: 'Email này được đăng kí rồi. Vui lòng thử email khác',
-    WRONG_EMAIL: 'Sai email rồi',
-    WRONG_PASSWORD: 'Sai mật khẩu rồi',
-    INVALID_PHONE: 'Số điện thoại không khả dụng',
-    DUPLICATED_PASSWORD: 'Mật khẩu mới không trùng với mật khẩu cũ',
-    NOT_FOUND: 'Không tìm thấy trang điều hướng.',
-    BAD_REQUEST: 'Bạn nhập sai gì đó rồi, hãy thử nhập lại.',
-    UNAUTHORIZED: 'Bạn cần đăng nhập.',
-    FORBIDDEN: 'Bạn không được phép thực hiện việc này.'
+    NOT_ACTIVATED:
+      'Your account is not activated yet. Please check your email.',
+    EXISTED_EMAIL:
+      'This email is already registered. Please try another email.',
+    USER_NOT_FOUND: 'User not found.',
+    INVALID_EMAIL: 'This email is invalid.',
+    WRONG_PASSWORD: 'Wrong password.',
+    INVALID_PHONE: 'This phone number is invalid.',
+    DUPLICATED_PASSWORD: 'This password is already used.',
+    NOT_FOUND: 'Not found.',
+    BAD_REQUEST: 'Bad request.',
+    UNAUTHORIZED: 'Unauthorized.',
+    FORBIDDEN: 'Forbidden.'
   },
   responseErrorMessage: {
-    CONFLICT: 'Dữ liệu không đúng, có khi nó đã có rồi.',
-    INTERNAL_SERVER_ERROR: 'Lỗi server.'
+    CONFLICT: 'Conflict.',
+    INTERNAL_SERVER_ERROR: 'Internal server error.'
   }
 };

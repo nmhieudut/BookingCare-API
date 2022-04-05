@@ -1,5 +1,5 @@
 import Sequelize from 'sequelize';
-import { Settings } from 'utils/settings';
+import { DB_CONFIG } from 'constants/secret';
 
 // Option 1: Passing a connection URI
 // const sequelize = new Sequelize('sqlite::memory:'); // Example for sqlite
@@ -13,11 +13,11 @@ import { Settings } from 'utils/settings';
 
 // Option 3: Passing parameters separately (other dialects)
 const sequelize = new Sequelize(
-  Settings.db.user,
-  Settings.db.name,
-  Settings.db.password,
+  DB_CONFIG.db.user,
+  DB_CONFIG.db.name,
+  DB_CONFIG.db.password,
   {
-    host: Settings.db.host,
+    host: DB_CONFIG.db.host,
     dialect: 'mysql'
   }
 );
