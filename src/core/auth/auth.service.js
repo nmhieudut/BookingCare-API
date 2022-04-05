@@ -1,6 +1,6 @@
 import { ErrorMessage } from 'constants/messages';
 import ApiError from 'utils/ApiError';
-import { UserService } from './user.service';
+import { UserService } from '../user/user.service';
 
 export const AuthService = {
   async loginWithEmailAndPassword(email, password) {

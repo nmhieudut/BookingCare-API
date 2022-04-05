@@ -1,14 +1,10 @@
-import { JwtStrategy } from 'plugins/jwt';
+import { JwtStrategy } from 'plugins';
 
 export const TokenService = {
-  generateToken(payload) {
-    const token = JwtStrategy.sign(payload);
-    return token;
-  },
   async generateAuthToken(userData) {
     try {
       const { id, roleId } = userData;
-      const token = await TokenService.generateToken({
+      const token = await JwtStrategy.sign({
         id,
         roleId
       });
